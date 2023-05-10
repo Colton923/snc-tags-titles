@@ -17,7 +17,6 @@ export default function Index() {
           borderRadius: '5px',
           width: '200px',
           textAlign: 'center',
-          margin: '0 0 0 100px',
           transform: 'translate(50%, -50%)',
         }}
       >
