@@ -1,0 +1,139 @@
+.mobileOverlay {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 0;
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right bottom, #767676, #767676, #767676, #767676, #767676, #6e6e6e, #656667, #5d5e5f, #4b4d4e, #393d3d, #282d2d, #191e1d);
+  cursor: default;
+}
+
+.wrapper{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.clicked {
+  transform: rotate(45deg) translate(10px, 0px);
+
+  .lineOne {
+    animation: lineOneClicked 0.3s ease-in-out forwards;
+  }
+  .lineTwo {
+    animation: lineTwoClicked 0.3s ease-in-out forwards;
+  }
+}
+
+.unclicked {
+  transform: rotate(0deg) translate(0px, 0px);
+
+  .lineOne {
+    animation: lineOneUnclicked 0.3s ease-in-out forwards;
+
+  }
+
+  .lineTwo {
+    animation: lineTwoUnclicked 0.3s ease-in-out forwards;
+  }
+}
+
+@keyframes lineOneClicked {
+  100% {
+    transform: translateY(30px);
+
+  }
+}
+
+@keyframes lineTwoClicked {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+.link {
+  display: none;
+}
+
+.activeLink {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: .1rem;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  margin: 1rem 0;
+  line-height: 50px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  height: 50px;
+  width: 100px;
+
+  &:hover{
+    animation: HoverNavItem 0.5s forwards;
+    cursor: pointer;
+    opacity: 1;
+    color: var(--blue);
+  }
+
+  top: -100px;
+  opacity: 0;
+  animation: NavItem 0.5s forwards;
+}
+
+@for $i from 1 through 4 {
+  .activeLink:nth-child(#{$i}n) {
+      animation-delay: #{$i * 0.3}s;
+  }
+}
+
+@keyframes HoverNavItem {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    color: var(--blue);
+  }
+}
+
+@keyframes NavItem {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}

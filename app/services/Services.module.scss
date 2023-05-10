@@ -1,0 +1,177 @@
+@mixin mediumScreen() {
+    @media (min-width: 768px) {
+        @content;
+    }
+  }
+
+  @mixin largeScreen() {
+    @media (min-width: 992px) {
+        @content;
+    }
+  }
+
+.pageWrapper {
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1400px) {
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin: 1rem 0 2rem 0;
+        color: var(--blue);
+
+        @include mediumScreen() {
+            text-align: center;
+        }
+    }
+
+    .h1Span {
+        color: var(--grey);
+        font-size: 1.1rem;
+        display: block;
+        text-transform: uppercase;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        color: rgb(71, 71, 71);
+
+        @include mediumScreen() {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+    }
+
+    .heroWrapper {
+        width: 100%;
+        position: relative;
+        height: 150px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .pageTitle {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(14,105,205,.6);
+        background: linear-gradient(.25turn, rgba(14,105,205,.6), rgba(128,128,128,.6));
+        color: var(--white);
+        }
+
+        @include mediumScreen() {
+            height: 300px;
+        }
+    }
+
+    .pageContentWrapper {
+        padding: 2rem;
+        max-width: 1400px;
+
+        .topSectionWrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: start;
+            gap: 2rem;
+            padding-bottom: 2rem;
+
+            @include mediumScreen() {
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                border-top: 2px solid var(--blue);
+                padding-top: 2rem;
+                padding-bottom: 1rem;
+            }
+
+            h2 {
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+
+            .serviceTypeWrapper {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .topSectionList {
+                font-weight: 400;
+                margin: 0;
+                list-style-type: none;
+
+              @include mediumScreen() {
+                  max-width: 1000px;
+
+                }
+
+                li {
+                    margin-bottom: .5rem;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        color: var(--blue);
+                        text-decoration: none;
+                        font-size: 1.2rem;
+
+                        &:hover {
+                            color: var(--grey);
+                        }
+
+                        @include mediumScreen() {
+                        }
+                    }
+                }
+            }
+        }
+
+        .cardGrids {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            .grid_h2 {
+                text-align: center;
+                margin: 2rem 0 1rem 0;
+                color: var(--blue);
+                font-size: 1.6rem;
+                letter-spacing: .1rem;
+                padding: 2rem;
+                border-top: 2px solid var(--blue);
+
+                @include mediumScreen() {
+                    font-size: 2rem;
+                }
+            }
+
+            .serviceTypeGrid {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 2rem;
+
+                @include mediumScreen() {
+                    grid-template-columns: 1fr 1fr;
+                }
+                @include largeScreen() {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    row-gap: 4rem;
+
+                }
+            }
+        }
+
+    }
+
+}

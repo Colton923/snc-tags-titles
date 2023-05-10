@@ -1,0 +1,148 @@
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: var(--white);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  .banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    opacity: 0.9;
+    width: 100%;
+    padding: .5rem 0;
+
+    @media (max-width: 768px) {
+      background-color: var(--white);
+    }
+
+    .bannerBurger{
+      display: none;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        display: flex;
+        position: absolute;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+    .bannerItem{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0 1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      .bannerItemIcon{
+        border: 1px solid var(--white);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bannerItemText{
+        font-size: .9rem;
+        font-weight: 300;
+        color: var(--white);
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        margin: 0 1rem;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+  }
+
+  .logoWrapper{
+    align-items: center;
+    display: flex;
+    margin: 1rem;
+    cursor: pointer;
+
+    .logoLink{
+
+      .logoImage{
+
+      }
+    }
+  }
+
+  .linkWrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    .link{
+      font-size: .9rem;
+      font-weight: 800;
+      letter-spacing: .1rem;
+      color: var(--black);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      margin: 0 1rem;
+      line-height: 50px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      height: 50px;
+      width: 100px;
+
+      &:hover{
+        animation: HoverNavItem 0.5s forwards;
+        cursor: pointer;
+      }
+
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--blue);
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+@keyframes HoverNavItem {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    color: var(--blue);
+  }
+}

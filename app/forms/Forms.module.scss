@@ -1,0 +1,105 @@
+@mixin mediumScreen() {
+    @media (min-width: 768px) {
+        @content;
+    }
+  }
+
+  @mixin largeScreen() {
+    @media (min-width: 992px) {
+        @content;
+    }
+  }
+
+.pageWrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    h1 {
+        margin: 3rem 0;
+        color: var(--blue);
+        text-align: center;
+
+        @include mediumScreen() {
+            font-size: 3rem;
+        }
+    }
+
+    .pageContentWrapper {
+        padding: 2rem;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 2rem auto;
+
+        @include mediumScreen() {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            padding: 2rem 3rem;
+        }
+        @include largeScreen() {
+           row-gap: 3rem;
+        }
+
+        .PDFsCard {
+
+            background-color: var(--white);
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            max-width: 400px;
+
+            @include mediumScreen() {
+                margin-bottom: 0;
+                max-width: 350px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            @include largeScreen() {
+                max-width: 500px;
+            }
+
+            .imageWrapper {
+                width: 100%;
+                position: relative;
+                max-height: 350px;
+                border-radius: 3px;
+                text-decoration: none;
+
+                @include mediumScreen() {
+                    max-height: 300px;
+                }
+                @include largeScreen() {
+                    max-width: 500px;
+                }
+
+                .image {
+                    width: 100%;
+                    max-height: 300px;
+                    border-radius: 3px 3px 0 0;
+                    object-fit: cover;
+
+                    @include mediumScreen() {
+                        max-height: 275px;
+                    }
+                    @include largeScreen() {
+                        max-width: 500px;
+                    }
+                }
+
+            }
+
+            .PDFsName {
+                padding: 1rem;
+                text-transform: uppercase;
+                color: var(--blue);
+
+                @include mediumScreen() {
+                    font-size: 1.75rem;
+                    padding: 1rem;
+                }
+            }
+
+    }
+}
+}

@@ -1,0 +1,115 @@
+
+.footerWrapper {
+    background-color: var(--blue);
+    width: 100%;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    bottom: 0;
+
+    a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .footerTopSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+        gap: 3rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .logo {
+            background-color: var(--white);
+            padding: 1rem;
+            border-radius: 20px;
+
+            img {
+                max-width: 275px;
+
+
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+
+            @media (min-width: 768px) {
+                font-size: 1rem;
+            }
+        }
+
+        .line {
+            height: 2px;
+            width: 50px;
+            background-color: var(--white);
+            margin: 1rem 0;
+        }
+
+        .navigationWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .navLinks {
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+            }
+        }
+
+        .contactInfoWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media (min-width: 768px) {
+                align-items: flex-start;
+            }
+
+            img {
+                border: 1px solid var(--white);
+                padding: 5px;
+                border-radius: 50%;
+            }
+
+            .contactItemWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                margin-top: 1.5rem;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 0;
+                    margin-bottom: 1.5rem;
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
+    .footerBottomSection {
+        border-top: 1px solid var(--white);
+        padding: 1rem;
+    }
+
+}

@@ -1,0 +1,120 @@
+
+
+{
+	"services": [
+		{
+			"vehicleRegistration": [
+			{
+				"id": 1,
+				"name": "Vehicle Title and Registration",
+				"imageSrc": "/images/webp/beach.webp"
+			},
+			{
+				"id": 2,
+				"name": "Vehicle Registration with a Plate",
+				"imageSrc": "/images/webp/crabs.webp"
+			},
+			{
+				"id": 3,
+				"name": "Vehicles Purchased from a Dealer",
+				"imageSrc": "/images/webp/field.webp"
+			},
+      {
+        "id": 4,
+        "name": "Gift Registration",
+        "imageSrc": "/images/webp/files.webp"
+      },
+      {
+        "id": 5,
+        "name": "Title with Temporary Tag",
+        "imageSrc": "/images/webp/forms.webp"
+      },
+      {
+        "id": 6,
+        "name": "Title with Temporary Tag",
+        "imageSrc": "/images/webp/moneys.webp"
+      },
+      {
+        "id": 7,
+        "name": "New Maryland Resident",
+        "imageSrc": "/images/webp/oldschool.webp"
+      },
+      {
+        "id": 8,
+        "name": "Title Only",
+        "imageSrc": "/images/webp/paper-pen.webp"
+      },
+      {
+        "id": 9,
+        "name": "Historic or Street Rod Registration",
+        "imageSrc": "/images/webp/paper.webp"
+      },
+      {
+        "id": 10,
+        "name": "In Transit Tags",
+        "imageSrc": "/images/webp/plates.webp"
+      }
+		]
+		},
+    {
+			"other": [
+      {
+        "id": 11,
+        "name": "Standard Renewal",
+        "imageSrc": "/images/webp/taxi.webp"
+      },
+      {
+        "id": 12,
+        "name": "Homemade Trailers",
+        "imageSrc": "/images/webp/traffic.webp"
+      },
+      {
+        "id": 13,
+        "name": "Driving Records",
+        "imageSrc": "/images/webp/truck.webp"
+      },
+      {
+        "id": 14,
+        "name": "Vehicle Records",
+        "imageSrc": "/images/webp/usa.webp"
+      },
+      {
+        "id": 15,
+        "name": "Duplicate Titles",
+        "imageSrc": "/images/webp/van.webp"
+      },
+      {
+        "id": 16,
+        "name": "Retagging Vehicle",
+        "imageSrc": "/images/webp/windshield.webp"
+      },
+      {
+        "id": 17,
+        "name": "Substitute Sticker",
+        "imageSrc": "/images/webp/old.webp"
+      },
+      {
+        "id": 18,
+        "name": "Plates and Registration Cards",
+        "imageSrc": "/images/webp/hotrod.webp"
+      },
+      {
+        "id": 19,
+        "name": "Handicap Plates and Placards",
+        "imageSrc": "/images/webp/dash.webp"
+      },
+      {
+        "id": 20,
+        "name": "Maine Trailer Tags",
+        "imageSrc": "/images/webp/ducky.webp"
+      },
+      {
+        "id": 21,
+        "name": "Tag Returns",
+        "imageSrc": "/images/webp/coolcar.webp"
+      }
+		]
+		}
+	]
+}
+
